@@ -1,8 +1,8 @@
+import avaterLocal from '@/assets/svg/avater.svg';
 import { useFetchUserInfo } from '@/hooks/user-setting-hooks';
 import { Avatar } from 'antd';
 import React from 'react';
 import { history } from 'umi';
-
 import styles from '../../index.less';
 
 const App: React.FC = () => {
@@ -17,10 +17,7 @@ const App: React.FC = () => {
       size={32}
       onClick={toSetting}
       className={styles.clickAvailable}
-      src={
-        userInfo.avatar ??
-        'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
-      }
+      src={userInfo.avatar ?? avaterLocal}
     />
   );
 };
